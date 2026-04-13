@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .brand {
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="brand"></div>
+        <div class="nav-links">
+            <a href="/home">Home</a>
+            <a href="/form">Form</a>
+            <a href="/list">Daftar Data</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Selamat Datang Brokk</h1>
+        <p><strong th:text="${namaUser}">User</strong>
+        <a href="/form" class="btn">Mulai Isi Form</a>
+    </div>
+</body>
+
+</html>
